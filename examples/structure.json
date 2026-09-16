@@ -1,0 +1,25 @@
+{
+  "components": [
+    {"component_id": "L1", "type": "inductor", "bbox": [10, 40, 30, 60]},
+    {"component_id": "C1", "type": "capacitor", "bbox": [50, 10, 70, 30]},
+    {"component_id": "V1", "type": "voltage_source", "bbox": [50, 70, 70, 90]},
+    {"component_id": "R1", "type": "resistor", "bbox": [90, 40, 110, 60]}
+  ],
+  "nodes": [
+    {"node_id": "N1"},
+    {"node_id": "N2"},
+    {"node_id": "N3"},
+    {"node_id": "N4"}
+  ],
+  "edges": [
+    {"component_id": "L1", "terminal_side": "left", "node_id": "N1"},
+    {"component_id": "C1", "terminal_side": "left", "node_id": "N1"},
+    {"component_id": "L1", "terminal_side": "right", "node_id": "N2"},
+    {"component_id": "V1", "terminal_side": "left", "node_id": "N2"},
+    {"component_id": "C1", "terminal_side": "right", "node_id": "N3"},
+    {"component_id": "R1", "terminal_side": "left", "node_id": "N3"},
+    {"component_id": "V1", "terminal_side": "right", "node_id": "N4"},
+    {"component_id": "R1", "terminal_side": "right", "node_id": "N4"}
+  ],
+  "texts": []
+}

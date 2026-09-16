@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qter-circuitvqa"
+version = "0.1.0"
+description = "Question-conditioned topology-preserving evidence routing for CircuitVQA"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+router = [
+  "numpy>=1.26",
+  "sentence-transformers>=2.7",
+  "torch>=2.2"
+]
+test = ["pytest>=8"]
+
+[project.scripts]
+qter = "qter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
